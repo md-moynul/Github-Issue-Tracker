@@ -49,9 +49,9 @@
     <main class="py-20 bg-base-200 ">
         <section class="w-9/12 mx-auto shadow">
             <div class="flex p-6 gap-2 bg-base-100 shadow mb-4 items-center">
-                <button onclick="toggle('allBtn')" id="allBtn" class="btn btn-primary w-30">All</button>
-                <button onclick="toggle('openBtn')" id="openBtn" class="btn bg-base-100 w-30">Open</button>
-                <button onclick="toggle('closeBtn')" id="closeBtn" class="btn bg-base-100 w-30">Close</button>
+                <button onclick="toggle('allBtn')" id="allBtn" class="btn btn-primary lg:w-30">All</button>
+                <button onclick="toggle('openBtn')" id="openBtn" class="btn bg-base-100 lg:w-30">Open</button>
+                <button onclick="toggle('closeBtn')" id="closeBtn" class="btn bg-base-100 lg:w-30">Close</button>
             </div>
             <div class="flex justify-between p-6  bg-base-100 shadow ">
                 <div class="flex gap-2 items-center">
@@ -76,7 +76,62 @@
             <section>
                 <div id="cardContainer" class="p-6 grid grid-cols-4 gap-3">
                 </div>
+                <!-- spinner -->
+                <div id="spinner" class="h-[60vh] flex justify-center items-center hidden">
+                    <span class="loading loading-spinner loading-lg"></span>
+                </div>
+
             </section>
+            <div>
+                <dialog id="boxModal" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box space-y-6">
+                        <form method="dialog">
+                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <div class="space-y-6">
+                            <h3 id="modalTittle" class="text-2xl font-bold"></h3>
+                            <div class="flex items-center space-x-2">
+                                <p id="modalStatus" class="p-1 text-xs text-white  rounded-full">
+                                    Opened
+                                </p>
+                                <span class="w-1 h-1 bg-[#64748B] rounded-full"></span>
+                                <p>
+                                    Opened by <span id="modalName"></span>
+                                </p>
+                                <span class="w-1 h-1 bg-[#64748B] rounded-full"></span>
+                                <p id="modalDate">
+                                    22/02/2026
+                                </p>
+                            </div>
+                            <p id="modalDes" class="line-clamp-2 text-xs text-gray "></p>
+                            <div class="flex">
+                                <div class="w-[50%] space-y-2.5">
+                                    <p class="text-gray ">
+                                        Assignee:  
+                                    </p>
+                                    <p id="modalNameB" class="font-semibold">
+                                        Fahim Ahmed
+                                    </p>
+                                </div>
+                                <div class="space-y-2.5">
+                                    <p class="text-gray ">
+                                        Priority:
+                                    </p>
+                                    <p id="modalPriority" class="bg-red-500 text-white px-4 py-1.25 rounded-full ">
+                                        High
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <button class="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
         </section>
     </main>
 
