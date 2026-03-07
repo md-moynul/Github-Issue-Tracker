@@ -67,7 +67,7 @@ function displayData(data) {
         if (element.status === 'open') {
             newCard.className = ('border-t-green-500 bg-base-100 rounded-xl  border-t-[3px]   shadow ')
         } else if (element.status === 'closed') {
-            newCard.className = ('border-t-red-500 bg-base-100 rounded-xl  border-t-[3px]   shadow ')
+            newCard.className = ('border-t-primary bg-base-100 rounded-xl  border-t-[3px]   shadow ')
         }
         newCard.innerHTML = `
         <div onclick="modal('${element.id}')" class="">

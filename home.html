@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="./style/style.css">
 
 <body>
-    <header class="px-20 py-4 shadow flex justify-between">
+    <header class="p-4 lg:px-20 shadow flex justify-between">
         <div class="flex gap-1">
             <div class="w-8">
                 <img src="./assets/github-logo.png" alt="">
             </div>
-            <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+            <h2 class="text-2xl font-semibold hidden md:block">GitHub Issues Tracker</h2>
         </div>
         <div>
             <div class=" flex space-x-4">
@@ -46,16 +46,16 @@
             </div>
         </div>
     </header>
-    <main class="py-20 bg-base-200 ">
-        <section class="w-9/12 mx-auto shadow">
+    <main class="py-5 md:py-10 lg:py-20 bg-base-200 ">
+        <section class="w-11/12 md:w-10/12 lg:9/12 mx-auto shadow">
             <div class="flex p-6 gap-2 bg-base-100 shadow mb-4 items-center">
-                <button onclick="toggle('allBtn')" id="allBtn" class="btn btn-primary lg:w-30">All</button>
-                <button onclick="toggle('openBtn')" id="openBtn" class="btn bg-base-100 lg:w-30">Open</button>
-                <button onclick="toggle('closeBtn')" id="closeBtn" class="btn bg-base-100 lg:w-30">Close</button>
+                <button onclick="toggle('allBtn')" id="allBtn" class="btn btn-primary md:w-30">All</button>
+                <button onclick="toggle('openBtn')" id="openBtn" class="btn bg-base-100 md:w-30">Open</button>
+                <button onclick="toggle('closeBtn')" id="closeBtn" class="btn bg-base-100 md:w-30">Close</button>
             </div>
             <div class="flex justify-between p-6  bg-base-100 shadow ">
                 <div class="flex gap-2 items-center">
-                    <div class=" w-12 h-12 bg-primary/20 rounded-full p-2 flex justify-center items-center">
+                    <div class=" bg-primary/20 rounded-full p-1 md:p-2 flex justify-center items-center">
                         <img src="./assets/Aperture.png" alt="">
                     </div>
                     <div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <section>
-                <div id="cardContainer" class="p-6 grid grid-cols-4 gap-3">
+                <div id="cardContainer" class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                 </div>
                 <!-- spinner -->
                 <div id="spinner" class="h-[60vh] flex justify-center items-center hidden">
