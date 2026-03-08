@@ -60,7 +60,7 @@
                     </div>
                     <div>
                         <h2 class="font-bold text-xl">
-                            <span id="total">50 </span>
+                            <span id="total">50</span>
                             Issues
                         </h2>
                         <p class="text-gray text-[16px]">Track and manage your project issues</p>
@@ -88,48 +88,14 @@
                         <form method="dialog">
                             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                         </form>
-                        <div class="space-y-6">
-                            <h3 id="modalTittle" class="text-2xl font-bold"></h3>
-                            <div class="flex items-center space-x-2">
-                                <p id="modalStatus" class="p-1 text-xs text-white  rounded-full">
-                                    Opened
-                                </p>
-                                <span class="w-1 h-1 bg-[#64748B] rounded-full"></span>
-                                <p>
-                                    Opened by <span id="modalName"></span>
-                                </p>
-                                <span class="w-1 h-1 bg-[#64748B] rounded-full"></span>
-                                <p id="modalDate">
-                                    22/02/2026
-                                </p>
-                            </div>
-                            <p id="modalDes" class="line-clamp-2 text-xs text-gray "></p>
-                            <div class="flex">
-                                <div class="w-[50%] space-y-2.5">
-                                    <p class="text-gray ">
-                                        Assignee:  
-                                    </p>
-                                    <p id="modalNameB" class="font-semibold">
-                                        Fahim Ahmed
-                                    </p>
-                                </div>
-                                <div class="space-y-2.5">
-                                    <p class="text-gray ">
-                                        Priority:
-                                    </p>
-                                    <p id="modalPriority" class="bg-red-500 text-white px-4 py-1.25 rounded-full ">
-                                        High
-                                    </p>
-                                </div>
-                            </div>
+                        <div id="modalDetails" class="">
+                            
                         </div>
-
                         <div class="modal-action">
                             <form method="dialog">
                                 <button class="btn">Close</button>
                             </form>
                         </div>
-                    </div>
                 </dialog>
             </div>
         </section>
