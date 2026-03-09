@@ -186,7 +186,7 @@ btnSearch.addEventListener('click', () => {
     allBtn.classList.add('bg-base-100');
     openBtn.classList.add('bg-base-100');
     closeBtn.classList.add('bg-base-100');
-    const searchText = inputSearch.value;
+    const searchText = inputSearch.value.trim();
     fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`).then(res => res.json()).then(json => displayData(json.data))
 
 
