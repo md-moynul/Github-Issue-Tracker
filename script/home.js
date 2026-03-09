@@ -100,7 +100,7 @@ function displayData(data) {
                                     <h2 class="font-semibold text-[16px] h-12">${element.title}</h2>
                                     <p  class="line-clamp-2 text-[14px] text-gray ">${element.description}</p>
                                 </div>
-                                <div class="flex gap-2 justify-center ">
+                                <div class="flex gap-2">
                                     ${displayLabels(element.labels)}
                                 </div>
 
