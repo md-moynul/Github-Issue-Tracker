@@ -40,13 +40,13 @@ function toggle(id) {
         loadingSpinner(true);
         displayData(open);
     } else if (id === 'closeBtn') {
-         inputSearch.value = '';
+        inputSearch.value = '';
         loadingSpinner(true)
         displayData(close);
     } else if (id === 'allBtn') {
-         inputSearch.value = '';
+        inputSearch.value = '';
         loadingSpinner(true);
-        displayData(all);
+        loadData();
     }
 }
 
@@ -58,9 +58,16 @@ async function loadData() {
     data.data.forEach(element => {
         all.push(element)
         if (element.status === 'open') {
-            open.push(element);
+            const isIn = open.find(item => item.id == element.id);
+            if (!isIn) {
+                open.push(element);
+            }
+
         } else {
-            close.push(element);
+            const isIn = close.find(item => item.id == element.id);
+            if (!isIn) {
+                close.push(element);
+            }
         }
     });
     displayData(data.data);
@@ -133,7 +140,7 @@ async function modal(id) {
     newModal.innerHTML = `
         <h3 id="modalTittle" class="text-2xl font-bold">${data.title}</h3>
                             <div class="flex items-center space-x-2">
-                                <p   class=" ${data.status === 'open' ? `bg-green-200 text-green-500 border`:`bg-red-100 text-red-500 border `} px-4 py-2 text-xs  rounded-full">${data.status}
+                                <p   class=" ${data.status === 'open' ? `bg-green-200 text-green-500 border` : `bg-red-100 text-red-500 border `} px-4 py-2 text-xs  rounded-full">${data.status}
                                 </p>
                                 <span class="w-1 h-1 bg-[#64748B] rounded-full"></span>
                                 <p>
